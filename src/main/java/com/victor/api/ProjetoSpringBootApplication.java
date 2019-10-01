@@ -16,10 +16,13 @@ public class ProjetoSpringBootApplication {
 		System.out.println("Numero para recursividade: ");
         int num =  sc.nextInt();
         
-        for(int i = 1; i<= num; i++) {
-        fibonacciRec(i);
-        System.out.println(fibonacciRec(i));
-        }
+        int resultado = fibonacciRec(num);
+        System.out.println(resultado);
+        
+        //for(int i = 1; i<= num; i++) {
+        //fibonacciRec(num);
+        //System.out.println(fibonacciRec(num));
+        //}
 	}
 	
 	public static int fibonacciRec(int recursiv) {
