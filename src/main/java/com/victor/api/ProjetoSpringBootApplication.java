@@ -9,28 +9,12 @@ public class ProjetoSpringBootApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ProjetoSpringBootApplication.class, args);
-		System.out.println("Olá Mundo!");
 		
-		Scanner sc = new Scanner(System.in);
+		Fibonacci fibo = new Fibonacci();
 		
-		System.out.println("Numero para recursividade: ");
-        int num =  sc.nextInt();
-        
-        int resultado = fibonacciRec(num);
-        System.out.println(resultado);
-        
-        //for(int i = 1; i<= num; i++) {
-        //fibonacciRec(num);
-        //System.out.println(fibonacciRec(num));
-        //}
+		for (int i = 0; i < 30; i++) {
+	        System.out.println("(" + i + "):" + fibo.fiboAtual(i) + "\t");
+	     }
 	}
-	
-	public static int fibonacciRec(int recursiv) {
-		if(recursiv == 1 || recursiv == 2) {
-		   return 1;
-	   } else {
-		   return fibonacciRec(recursiv - 1) + fibonacciRec(recursiv - 2);		   
-	   }
-   }
-
 }
+
